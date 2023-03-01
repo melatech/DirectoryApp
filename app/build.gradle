@@ -1,6 +1,10 @@
 plugins {
+    id 'kotlin-android'
+    id 'kotlin-kapt'
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'dagger.hilt.android.plugin'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -13,6 +17,8 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+
+        buildConfigField("String", "BASE_URL", MY_URL)
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -34,11 +40,43 @@ android {
 
 dependencies {
 
-    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.core:core-ktx:1.9.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
     implementation 'com.google.android.material:material:1.8.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //Fragment
+    implementation "androidx.fragment:fragment-ktx:$fragmentKtx_version"
+
+    // Hilt
+    implementation("com.google.dagger:hilt-android:$hilt_version")
+    kapt("com.google.dagger:hilt-android-compiler:$hilt_version")
+
+    // Hilt Compiler
+    kapt "androidx.hilt:hilt-compiler:$hiltCompiler_version"
+
+    // Lifecycle ViewModel / Extensions
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_viewmodel_version"
+    implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_extension_version"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation "com.squareup.retrofit2:converter-gson:$retrofitGson_version"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitRx_version"
+
+    //Navigation
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version"
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:$glide_version"
+    kapt "com.github.bumptech.glide:compiler:$glide_version"
+}
+
+//allow generated files
+kapt{
+    correctErrorTypes true
 }
