@@ -9,18 +9,8 @@ import retrofit2.http.Query
 interface DirectoryApi {
 
     @GET("people")
-    suspend fun getPeopleServerList(
-        @Query("country")
-        country: String,
-        @Query("page")
-        page: Int,
-    ): Response<PeopleAPIResponse>
+    suspend fun getPeopleServerList(): Response<PeopleAPIResponse>
 
     @GET("rooms")
-    suspend fun getRoomsServerList(
-        @Query("country")
-        country: String,
-        @Query("page")
-        page: Int,
-        ): Response<RoomsAPIResponse>
+    suspend fun getRoomsServerList(): Response<RoomsAPIResponse>
 }
