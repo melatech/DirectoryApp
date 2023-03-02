@@ -1,4 +1,6 @@
 package com.melatech.ui.directory.people
 
-class PeopleAdapter {
+import androidx.recyclerview.widget.ListAdapter
+
+class PeopleAdapter(){
 }

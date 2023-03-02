@@ -27,13 +27,13 @@ interface DataSourceModule {
         peopleRepository: PeopleRepository
     ): IPeopleRepository
 
-    @Binds
-    fun bindRoomsDatasource(
-        roomsDatasource: RemoteRoomsDatasource
-    ): IRoomsDatasource
-
-    @Binds
-    fun bindRoomsRepository(
-        roomsRepository: RoomsRepository
-    ): IRoomsRepository
+//    @Binds
+//    fun bindRoomsDatasource(
+//        roomsDatasource: RemoteRoomsDatasource
+//    ): IRoomsDatasource
+//
+//    @Binds
+//    fun bindRoomsRepository(
+//        roomsRepository: RoomsRepository
+//    ): IRoomsRepository
 }
