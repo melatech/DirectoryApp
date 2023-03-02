@@ -22,10 +22,10 @@ class PeopleViewModel @Inject constructor(
             val apiResponse = peopleRepository.getPeopleDirectory()
             val peopleDirectory = apiResponse.body()
             println("jason inside vm peopleDirectory: $peopleDirectory")
-
+            peopleDirectory?.let {
+                val peopleList = it
+                _peopleUiState.value = peopleList
+            }
         }
     }
-
-
-
 }

@@ -10,6 +10,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.recyclerview.widget.RecyclerView
 import com.melatech.R
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collect
@@ -19,6 +20,8 @@ import kotlinx.coroutines.launch
 class PeopleFragment : Fragment() {
 
     private val viewModel by viewModels<PeopleViewModel>()
+    lateinit var peopleAdapter: PeopleAdapter
+    lateinit var recyclerView: RecyclerView
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -30,7 +33,9 @@ class PeopleFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         println("jason inside onViewCreated")
-
+        peopleAdapter = PeopleAdapter()
+        recyclerView = view.findViewById(R.id.recycler_view)
+        recyclerView.adapter = peopleAdapter
     }
 
     override fun onCreateView(
@@ -48,6 +53,7 @@ class PeopleFragment : Fragment() {
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.peopleUiState.collect{ people ->
                     println("jason inside collect -> $people")
+                    peopleAdapter.submitList(people)
                 }
             }
         }
