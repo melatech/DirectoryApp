@@ -4,11 +4,12 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.melatech.data.source.people.IPeopleRepository
 import com.melatech.data.source.remote.model.people.PeopleAPIResponseItem
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
-
+@HiltViewModel
 class PeopleViewModel @Inject constructor(
     private val peopleRepository: IPeopleRepository
 ) : ViewModel() {

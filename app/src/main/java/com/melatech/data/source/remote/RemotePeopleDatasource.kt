@@ -1,5 +1,6 @@
 package com.melatech.data.source.remote
 
+import android.util.Log
 import com.melatech.data.source.people.IPeopleDatasource
 import com.melatech.data.source.remote.api.DirectoryApi
 import com.melatech.data.source.remote.model.people.PeopleAPIResponse
@@ -16,6 +17,7 @@ class RemotePeopleDatasource @Inject constructor(
     val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
     ): IPeopleDatasource {
     override suspend fun getPeopleDirectory(): Response<PeopleAPIResponse> {
+        Log.d("jason", "inside datasource")
         return withContext(ioDispatcher){
             directoryApi.getPeopleServerList()
         }
