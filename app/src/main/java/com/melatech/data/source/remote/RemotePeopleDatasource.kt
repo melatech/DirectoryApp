@@ -15,10 +15,10 @@ class RemotePeopleDatasource @Inject constructor(
     private val directoryApi: DirectoryApi,
     @IODispatcher
     val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
-    ): IPeopleDatasource {
+) : IPeopleDatasource {
     override suspend fun getPeopleDirectory(): Response<PeopleAPIResponse> {
         Log.d("jason", "inside datasource")
-        return withContext(ioDispatcher){
+        return withContext(ioDispatcher) {
             directoryApi.getPeopleServerList()
         }
     }

@@ -11,7 +11,7 @@ class PeopleRepository @Inject constructor(
 ): IPeopleRepository {
 
     override suspend fun getPeopleDirectory(): Response<PeopleAPIResponse> {
-        Log.d("jason", "inside repo")
+        Log.d("jason", "inside people repo")
         return peopleDatasource.getPeopleDirectory()
     }
 }

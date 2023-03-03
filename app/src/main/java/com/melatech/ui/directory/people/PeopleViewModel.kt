@@ -9,12 +9,14 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
 import javax.inject.Inject
+
 @HiltViewModel
 class PeopleViewModel @Inject constructor(
     private val peopleRepository: IPeopleRepository
 ) : ViewModel() {
 
-    private val _peopleUiState: MutableStateFlow<List<PeopleAPIResponseItem>> = MutableStateFlow(emptyList())
+    private val _peopleUiState: MutableStateFlow<List<PeopleAPIResponseItem>> =
+        MutableStateFlow(emptyList())
     val peopleUiState: StateFlow<List<PeopleAPIResponseItem>> = _peopleUiState
 
     init {

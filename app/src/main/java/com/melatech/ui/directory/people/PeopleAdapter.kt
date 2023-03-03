@@ -18,7 +18,6 @@ class PeopleAdapter(): ListAdapter<PeopleAPIResponseItem, PeopleAdapter.PeopleVi
         private val peopleFirstName: TextView = itemView.findViewById(R.id.tv_first_name)
         private val peopleLastName: TextView = itemView.findViewById(R.id.tv_last_name)
 
-
         fun bind(people: PeopleAPIResponseItem){
             with(itemView) {
                 Glide.with(context)
@@ -30,7 +29,6 @@ class PeopleAdapter(): ListAdapter<PeopleAPIResponseItem, PeopleAdapter.PeopleVi
             }
             peopleFirstName.text = people.firstName
             peopleLastName.text = people.lastName
-
         }
     }
 
