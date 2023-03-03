@@ -28,7 +28,7 @@ class PeopleAdapter(): ListAdapter<PeopleAPIResponseItem, PeopleAdapter.PeopleVi
                     .override(200,200)
                     .into(peopleSmallImage)
             }
-            peopleFirstName.text = people.name
+            peopleFirstName.text = people.firstName
             peopleLastName.text = people.lastName
 
         }

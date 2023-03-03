@@ -29,3 +29,28 @@ class PeopleViewModel @Inject constructor(
         }
     }
 }
+
+//-----------------------------------------------
+
+//init {
+//    viewModelScope.launch(IO) {
+//        val response = repository.getNewsHeadlines(COUNTRY_NAME, PAGE)
+//        val headlines = response.body()
+//        headlines?.run {
+//            val articleUIModelList = this.articles
+//                .map { article ->
+//                    ArticleUIModel(
+//                        id = article.id ?: 0,
+//                        title = article.title ?: "-",
+//                        description = article.description ?: "-",
+//                        authorName = article.author ?: "-",
+//                        formattedPublishedDate = article.publishedAt?.let { publishedDate ->
+//                            formatDateTimeUsecase(publishedDate)
+//                        } ?: "-",
+//                        contentUrl = article.url
+//                    )
+//                }
+//            _newsUIStateFlow.value = articleUIModelList
+//        }
+//    }
+//}

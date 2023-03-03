@@ -22,5 +22,4 @@ class RemotePeopleDatasource @Inject constructor(
             directoryApi.getPeopleServerList()
         }
     }
-
 }

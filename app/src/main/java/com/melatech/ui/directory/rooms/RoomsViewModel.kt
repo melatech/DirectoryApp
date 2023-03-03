@@ -1,4 +1,4 @@
-package com.melatech.ui.directory.room
+package com.melatech.ui.directory.rooms
 
 import androidx.lifecycle.ViewModel
 
