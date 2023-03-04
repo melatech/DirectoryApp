@@ -8,7 +8,6 @@ import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.create
 import javax.inject.Singleton
 
 @Module
@@ -29,7 +28,4 @@ object ApiModule {
     fun provideDirectoryApi(retrofit: Retrofit): DirectoryApi{
         return retrofit.create(DirectoryApi::class.java)
     }
-
-
-
 }

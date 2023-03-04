@@ -9,5 +9,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#22a602</color>
     <color name="red">#a60702</color>
+    <color name="brand_color">#C40202</color>
+    <color name="status">#E57373</color>
 
 </resources>

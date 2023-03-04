@@ -10,6 +10,11 @@
         android:name="com.melatech.ui.directory.people.PeopleFragment"
         android:label="People Screen"
         tools:layout="@layout/fragment_people" >
+        <action
+            android:id="@+id/navigateToPeopleDetailsFragment"
+            app:destination="@id/peopleDetailsFragment"
+            app:enterAnim="@android:anim/slide_in_left"
+            app:exitAnim="@android:anim/slide_out_right" />
 
     </fragment>
     <fragment
@@ -19,4 +24,10 @@
         tools:layout="@layout/fragment_rooms" >
 
     </fragment>
+    <fragment
+        android:id="@+id/peopleDetailsFragment"
+        android:name="com.melatech.ui.directory.people.PeopleDetailsFragment"
+        android:label="PeopleDetailsFragment"
+        tools:layout="@layout/fragment_people_details"
+        />
 </navigation>

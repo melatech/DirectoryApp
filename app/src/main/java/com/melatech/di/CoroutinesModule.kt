@@ -12,7 +12,6 @@ import javax.inject.Qualifier
 @Retention(AnnotationRetention.RUNTIME)
 annotation class IODispatcher
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object CoroutinesModule {

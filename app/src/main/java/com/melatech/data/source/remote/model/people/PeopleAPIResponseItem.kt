@@ -5,31 +5,31 @@ import java.io.Serializable
 
 data class PeopleAPIResponseItem(
     @SerializedName("avatar")
-    val avatar: String,
+    val avatar: String? = null,
     @SerializedName("createdAt")
-    val createdAt: String,
+    val createdAt: String? = null,
     @SerializedName("data")
-    val `data`: DataModel,
+    val `data`: DataModel? = null,
     @SerializedName("email")
-    val email: String,
+    val email: String? = null,
     @SerializedName("favouriteColor")
-    val favouriteColor: String,
+    val favouriteColor: String? = null,
     @SerializedName("firstName")
-    val firstName: String,
+    val firstName: String? = null,
     @SerializedName("fromName")
-    val fromName: String,
+    val fromName: String? = null,
     @SerializedName("id")
-    val id: String,
+    val id: String? = null,
     @SerializedName("jobtitle")
-    val jobTitle: String,
+    val jobTitle: String? = null,
     @SerializedName("lastName")
-    val lastName: String,
+    val lastName: String? = null,
     @SerializedName("name")
-    val name: String,
+    val name: String? = null,
     @SerializedName("size")
-    val size: String,
+    val size: String? = null,
     @SerializedName("to")
-    val to: String,
+    val to: String? = null,
     @SerializedName("type")
-    val type: String
+    val type: String? = null
 ): Serializable

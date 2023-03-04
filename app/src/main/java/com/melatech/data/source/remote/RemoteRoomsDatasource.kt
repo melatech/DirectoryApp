@@ -1,6 +1,5 @@
 package com.melatech.data.source.remote
 
-import android.util.Log
 import com.melatech.data.source.remote.api.DirectoryApi
 import com.melatech.data.source.remote.model.rooms.RoomsAPIResponse
 import com.melatech.data.source.rooms.IRoomsDatasource
@@ -17,7 +16,6 @@ class RemoteRoomsDatasource @Inject constructor(
     val ioDispatcher: CoroutineDispatcher = Dispatchers.IO
 ): IRoomsDatasource{
     override suspend fun getRoomDirectory(): Response<RoomsAPIResponse> {
-        Log.d("jason", "inside rooms datasource")
         return withContext(ioDispatcher){
             directoryApi.getRoomsServerList()
         }
