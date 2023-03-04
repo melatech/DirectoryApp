@@ -8,6 +8,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
+import java.text.SimpleDateFormat
+import java.util.*
 import javax.inject.Inject
 
 @HiltViewModel
@@ -26,8 +28,19 @@ class RoomsViewModel @Inject constructor(
             println("jason inside vm peopleDirectory: $roomsDirectory")
             roomsDirectory?.let {
                 val roomsList = it
-                _roomsUiState.value = roomsList
+                val roomsWithFormattedDates = roomsList.map { item ->
+                    item.copy(createdAt = formatDate(item.createdAt))
+                }
+                _roomsUiState.value = roomsWithFormattedDates
             }
         }
+    }
+
+    private fun formatDate(createdDate: String): String {
+        val parser = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.getDefault())
+        val formatter = SimpleDateFormat("dd/MM/yyyy", Locale.getDefault())
+        return parser.parse(createdDate)?.let {
+            formatter.format(it)
+        } ?: "-"
     }
 }
