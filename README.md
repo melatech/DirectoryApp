@@ -19,6 +19,7 @@ which means that the views are not destroyed but recycled for new items.
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222966818-f5af7691-54ca-4010-b21b-cd2060c68865.jpg" alt="virgin money image" width="270" height="585">
+
 The display eployee feature displays more information about the employee with the help of the 
 Jetpack Navigation Component
 </br>
