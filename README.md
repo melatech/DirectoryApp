@@ -6,7 +6,9 @@ Application which was built using the best practices and the latest technologies
 
 - The unidirectional architecture with the mvvm pattern was used to make the software build robust
 in design with a solid architecture
-- The ui was built using the single activity multi fragment model with the viewmodel exposing state and handling user action.
+- The ui layer was built using the single activity multi fragment model with the viewmodel exposing state and handling user action.
+- The data layer contains data classes, datasources and apis and the the repository which exposes data to the app and resolves conflicts between multiple datasources.
+- 
 </br>
 </br>
 **People Screen**
