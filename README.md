@@ -2,7 +2,7 @@
 ## By Jason Calvert 
 Virgin Money is a directory app which allows the staff to view their collegues </br>contact details and also see which
 rooms are currently occupied.</br>The Virgin Money App is a kotlin based Android Application which </br>was built using the best practices and the latest
-technologies
+technologies.
 </br>
 </br>
 **People Screen**
@@ -10,7 +10,7 @@ technologies
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222964713-a536a9ed-f8a0-43b8-83dd-61148f6c19ed.jpg" alt="virgin money image" width="270" height="585">
 
-This feature displays a list of employees in a recyclerview which makes it easy to display large sets of data.
+This feature displays a list of employees in a recyclerview which makes it easy </br>to display large sets of data. The recyclerview does what it says on the tin, it recycles the views as they scroll onto the screen.
 </br>
 </br>
 **Details Screen**
