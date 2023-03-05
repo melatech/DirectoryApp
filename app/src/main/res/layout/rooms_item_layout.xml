@@ -16,12 +16,12 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="98dp">
+        android:layout_height="133dp">
 
         <View
             android:id="@+id/color_square"
-            android:layout_width="126dp"
-            android:layout_height="97dp"
+            android:layout_width="150dp"
+            android:layout_height="133dp"
             android:background="@android:color/holo_green_light"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -31,9 +31,10 @@
             style="@style/TextAppearance.Material3.TitleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="36dp"
-            android:layout_marginTop="4dp"
+            android:layout_marginStart="48dp"
+            android:layout_marginTop="28dp"
             android:text="@string/room_text"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="@string/room_text" />
@@ -43,14 +44,30 @@
             style="@style/TextAppearance.Material3.TitleLarge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="72dp"
             android:layout_marginTop="8dp"
             android:text="@string/room_number"
             android:textSize="28sp"
             android:textStyle="bold"
+            android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tv_room_Text"
             tools:text="1" />
+
+        <TextView
+            android:id="@+id/tv_createdAtText"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/created_at"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/color_square"
+            app:layout_constraintTop_toTopOf="parent"
+
+            tools:text="CreatedAt" />
 
         <TextView
             android:id="@+id/tv_createdAt"
@@ -58,23 +75,41 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
             app:layout_constraintStart_toEndOf="@id/color_square"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_createdAtText"
 
-            tools:text="CreatedAt" />
+            tools:text="CreatedAtValue" />
+
 
         <TextView
-            android:id="@+id/tv_maximum_occupancy"
-            style="@style/TextAppearance.Material3.TitleLarge"
+            android:id="@+id/tv_maximum_occupancy_text"
+            style="@style/TextAppearance.Material3.BodyMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/max_occupancy"
+            android:textSize="20sp"
+            android:textStyle="bold"
             app:layout_constraintStart_toEndOf="@id/color_square"
             app:layout_constraintTop_toBottomOf="@id/tv_createdAt"
 
-            tools:text="Occupancy" />
+            tools:text="Max Occupancy" />
+
+        <TextView
+            android:id="@+id/tv_maximum_occupancy"
+            style="@style/TextAppearance.Material3.BodyMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="2dp"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@id/color_square"
+            app:layout_constraintTop_toBottomOf="@id/tv_maximum_occupancy_text"
+
+            tools:text="Occupancy value" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

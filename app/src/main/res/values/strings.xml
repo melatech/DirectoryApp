@@ -11,4 +11,6 @@
     <string name="email_text">Email Address:</string>
     <string name="job_title_text">Job Title:</string>
     <string name="favorite_color">Favourite Colour:</string>
+    <string name="created_at">Date:</string>
+    <string name="max_occupancy">Max Occupancy:</string>
 </resources>
