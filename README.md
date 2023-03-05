@@ -4,7 +4,7 @@ Virgin Money is a directory app which allows the staff to view their collegues c
 and also see which rooms are currently occupied.The Virgin Money App is a kotlin based Android 
 Application which was built using the best practices and the latest technologies.
 
-The unidirectional architecture with the mvvm pattern was used to make the software build robust
+- The unidirectional architecture with the mvvm pattern was used to make the software build robust
 in design with a solid architecture
 </br>
 </br>
