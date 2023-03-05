@@ -11,7 +11,7 @@ technologies
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222964713-a536a9ed-f8a0-43b8-83dd-61148f6c19ed.jpg" alt="virgin money image" width="270" height="585">
 
-This feature displays whatever Notes are currently available
+This feature displays a list of employees in a recyclerview which makes it easy to display large sets of data.
 </br>
 </br>
 **Details Screen**
