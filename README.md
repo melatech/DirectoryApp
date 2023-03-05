@@ -44,4 +44,4 @@ dipicted by the colours red and green.
 </br>
 ### TODO
 
-- 1 Navigaton Back Button implementation
+ - 1 Navigaton Back Button implementation
