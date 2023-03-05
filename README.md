@@ -6,9 +6,10 @@ Application which was built using the best practices and the latest technologies
 
 - The unidirectional architecture with the mvvm pattern was used to make the software build robust
 in design with a solid architecture
-- The ui layer was built using the single activity multi fragment model with the viewmodel exposing state and handling user action.
+- The ui layer was built using the single activity multi fragment model with the viewmodel exposing state handling config changes and also handling user action.
 - The data layer contains data classes, datasources and apis and the the repository which exposes data to the app and resolves conflicts between multiple datasources.
 - The network api called Retrofit also in the data layer which is a http client library which makes request and response calls.
+- Kotlin Coroutines with suspend functions was the reactive framework used with flow, for handling streams of data without blocking the main Thread.
 </br>
 </br>
 **People Screen**
