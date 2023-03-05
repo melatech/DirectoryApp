@@ -30,5 +30,9 @@ The Bottom Navigation Bar houses two buttons for navigating between the two scrr
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222967107-63fa005a-438f-4390-9443-ccd1d66893ff.jpg" alt="virgin money image" width="270" height="585">
+
+The rooms list feature displays a list of rooms which allows the user to see which rooms in the office are occupied or not, 
+dipicted by the colours red and green. 
+
 </br>
 </br>
