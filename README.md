@@ -8,7 +8,7 @@ Application which was built using the best practices and the latest technologies
 in design with a solid architecture
 - The ui layer was built using the single activity multi fragment model with the viewmodel exposing state and handling user action.
 - The data layer contains data classes, datasources and apis and the the repository which exposes data to the app and resolves conflicts between multiple datasources.
-- 
+- The network api called Retrofit also in the data layer which is a http client library which makes request and response calls.
 </br>
 </br>
 **People Screen**
