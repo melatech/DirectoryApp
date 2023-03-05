@@ -11,7 +11,7 @@ in design with a solid architecture
 - The network api called Retrofit also in the data layer which is a http client library which makes request and response calls.
 - Kotlin Coroutines with suspend functions was the reactive framework used with flow, for handling streams of data without blocking the main Thread.
 </br>
-## **People Screen
+## People Screen
 </br>
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222964713-a536a9ed-f8a0-43b8-83dd-61148f6c19ed.jpg" alt="virgin money image" width="270" height="585">
