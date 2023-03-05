@@ -24,13 +24,11 @@ class RoomsFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        println("jason inside rooms onAttach")
         getRoomsDirectory()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("jason inside rooms onViewCreated")
         roomsAdapter = RoomsAdapter()
         recyclerView = view.findViewById(R.id.rooms_recycler_view)
         recyclerView.adapter = roomsAdapter
@@ -40,17 +38,14 @@ class RoomsFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        println("jason inside rooms onCreateView")
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_rooms, container, false)
     }
 
     private fun getRoomsDirectory(){
-        println("jason inside rooms getRoomsDirectory")
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED){
                 viewModel.roomsUiState.collect{ rooms ->
-                    println("jason inside rooms collect -> $rooms")
                     roomsAdapter.submitList(rooms)
                 }
             }

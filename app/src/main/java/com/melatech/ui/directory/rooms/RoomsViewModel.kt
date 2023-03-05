@@ -25,7 +25,6 @@ class RoomsViewModel @Inject constructor(
         viewModelScope.launch {
             val apiResponse = roomsRepository.getRoomDirectory()
             val roomsDirectory = apiResponse.body()
-            println("jason inside vm peopleDirectory: $roomsDirectory")
             roomsDirectory?.let {
                 val roomsList = it
                 val roomsWithFormattedDates = roomsList.map { item ->

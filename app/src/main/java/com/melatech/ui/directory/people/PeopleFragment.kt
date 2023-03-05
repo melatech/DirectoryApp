@@ -26,13 +26,11 @@ class PeopleFragment : Fragment() {
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
-        println("jason inside onAttach")
         getPeopleDirectory()
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        println("jason inside onViewCreated")
         peopleAdapter = PeopleAdapter { people -> navigateToDetailsScreen(people, view) }
         recyclerView = view.findViewById(R.id.recycler_view)
         recyclerView.adapter = peopleAdapter

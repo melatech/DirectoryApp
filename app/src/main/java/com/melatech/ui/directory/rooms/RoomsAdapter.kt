@@ -1,10 +1,8 @@
 package com.melatech.ui.directory.rooms
 
-import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
@@ -12,18 +10,19 @@ import androidx.recyclerview.widget.RecyclerView
 import com.melatech.R
 import com.melatech.data.source.remote.model.rooms.RoomsAPIResponseItem
 
-class RoomsAdapter(): ListAdapter<RoomsAPIResponseItem, RoomsAdapter.RoomsViewHolder>(RoomsDiffCallback) {
-    class RoomsViewHolder(private val itemView: View): RecyclerView.ViewHolder(itemView) {
+class RoomsAdapter() :
+    ListAdapter<RoomsAPIResponseItem, RoomsAdapter.RoomsViewHolder>(RoomsDiffCallback) {
+    class RoomsViewHolder(private val itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val roomsSquareImage: View = itemView.findViewById(R.id.color_square)
         private val roomsRoomNumber: TextView = itemView.findViewById(R.id.tv_room_number_id)
         private val roomsCreatedAt: TextView = itemView.findViewById(R.id.tv_createdAt)
         private val roomsOccupancy: TextView = itemView.findViewById(R.id.tv_maximum_occupancy)
 
-        fun bind(rooms: RoomsAPIResponseItem){
+        fun bind(rooms: RoomsAPIResponseItem) {
             val occupancy = rooms.isOccupied
-            if (occupancy){
+            if (occupancy) {
                 roomsSquareImage.setBackgroundResource(R.color.green)
-            }else{
+            } else {
                 roomsSquareImage.setBackgroundResource(R.color.red)
             }
 
@@ -47,12 +46,18 @@ class RoomsAdapter(): ListAdapter<RoomsAPIResponseItem, RoomsAdapter.RoomsViewHo
     }
 }
 
-object RoomsDiffCallback: DiffUtil.ItemCallback<RoomsAPIResponseItem>() {
-    override fun areItemsTheSame(oldItem: RoomsAPIResponseItem, newItem: RoomsAPIResponseItem): Boolean {
+object RoomsDiffCallback : DiffUtil.ItemCallback<RoomsAPIResponseItem>() {
+    override fun areItemsTheSame(
+        oldItem: RoomsAPIResponseItem,
+        newItem: RoomsAPIResponseItem
+    ): Boolean {
         return oldItem == newItem
     }
 
-    override fun areContentsTheSame(oldItem: RoomsAPIResponseItem, newItem: RoomsAPIResponseItem): Boolean {
+    override fun areContentsTheSame(
+        oldItem: RoomsAPIResponseItem,
+        newItem: RoomsAPIResponseItem
+    ): Boolean {
         return oldItem.id == newItem.id
     }
 
