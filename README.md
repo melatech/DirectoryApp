@@ -44,5 +44,5 @@ shown by the colours red and green.
 </br>
 ### TODO
 
-1. Caching the data in the repository so no need to call API every time.
+1. Caching the data in the repository so no need to call the API every time.
 2. Use Jetpack Compose to implement ui
