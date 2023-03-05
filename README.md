@@ -1,7 +1,7 @@
 # Virgin Money - Android technical assignment
 ## By Jason Calvert 
 Virgin Money is a directory app which allows the staff to view their collegues </br>contact details and also see which
-rooms are currently occupied.</br>The Virgin Money App is a kotlin based Android Application which was built using the best practices and the latest
+rooms are currently occupied.</br>The Virgin Money App is a kotlin based Android Application which </br>was built using the best practices and the latest
 technologies
 </br>
 </br>
