@@ -12,7 +12,8 @@ Application which was built using the best practices and the latest technologies
 
 The people list feature displays a list of employees in a recyclerview which makes it easy to display large sets of data. 
 The recyclerview does what it says on the tin, it recycles the views as they scroll onto the screen, 
-which means that the views are not destroyed but recycled for new items.
+which means that the views are not destroyed but recycled for new items. The viewholder comes with click functionality
+for navigating to the details screen.
 </br>
 </br>
 **Details Screen**
@@ -20,8 +21,9 @@ which means that the views are not destroyed but recycled for new items.
 </br>
 <img src="https://user-images.githubusercontent.com/13630124/222966818-f5af7691-54ca-4010-b21b-cd2060c68865.jpg" alt="virgin money image" width="270" height="585">
 
-The display eployee feature displays more information about the employee with the help of the 
-Jetpack Navigation Component
+The display employee feature displays more information about the employee which is the destination screen from the people screen.
+Jetpack Navigation Component was used with the Bottom Navigation Bar which is the backbone of the application.
+The Bottom Navigation Bar houses two buttons for navigating between the two scrrens and also the display screen.
 </br>
 </br>
 **Room Screen**
