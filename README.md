@@ -44,6 +44,5 @@ dipicted by the colours red and green.
 </br>
 ### TODO
 
-1. Navigaton Back Button implementation (Time was against me)
-2. Cache the data in the repository so no need to call API every time.
-3. Use Jetpack Compose to implement ui
+1. Cache the data in the repository so no need to call API every time.
+2. Use Jetpack Compose to implement ui
