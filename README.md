@@ -26,7 +26,7 @@ for navigating to the details screen.
 **Details Screen**
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/13630124/222966818-f5af7691-54ca-4010-b21b-cd2060c68865.jpg" alt="virgin money image" width="270" height="585">
+<img src="https://user-images.githubusercontent.com/13630124/222995837-5e1807fd-a03b-4020-9541-48f81c3f99a2.jpg" alt="virgin money image" width="270" height="585">
 
 The display employee feature displays more information about the employee which is the destination screen from the people screen.
 Jetpack Navigation Component was used with the Bottom Navigation Bar which is the backbone of the application.
