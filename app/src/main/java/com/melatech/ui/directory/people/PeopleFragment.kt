@@ -21,8 +21,8 @@ import kotlinx.coroutines.launch
 class PeopleFragment : Fragment() {
 
     private val viewModel by activityViewModels<PeopleViewModel>()
-    lateinit var peopleAdapter: PeopleAdapter
-    lateinit var recyclerView: RecyclerView
+    private lateinit var peopleAdapter: PeopleAdapter
+    private lateinit var recyclerView: RecyclerView
 
     override fun onAttach(context: Context) {
         super.onAttach(context)

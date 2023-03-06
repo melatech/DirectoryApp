@@ -2,6 +2,7 @@ package com.melatech.ui.directory
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -14,17 +15,22 @@ import dagger.hilt.android.AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     lateinit var bottomNavView: BottomNavigationView
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         bottomNavView = findViewById(R.id.bottom_nav_view)
 
-        val navController = findNavController(R.id.fragmentContainerView)
+        navController = findNavController(R.id.fragmentContainerView)
         val appBarConfiguration =
             AppBarConfiguration(setOf(R.id.peopleFragment, R.id.roomsFragment))
         setupActionBarWithNavController(navController, appBarConfiguration)
         bottomNavView.setupWithNavController(navController)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp() || super.onSupportNavigateUp()
     }
 }
 

@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/peopleFragment"
         android:name="com.melatech.ui.directory.people.PeopleFragment"
-        android:label="People Screen"
+        android:label="People"
         tools:layout="@layout/fragment_people" >
         <action
             android:id="@+id/navigateToPeopleDetailsFragment"
@@ -20,14 +20,15 @@
     <fragment
         android:id="@+id/roomsFragment"
         android:name="com.melatech.ui.directory.rooms.RoomsFragment"
-        android:label="Rooms Screen"
+        android:label="Room"
         tools:layout="@layout/fragment_rooms" >
 
     </fragment>
     <fragment
         android:id="@+id/peopleDetailsFragment"
         android:name="com.melatech.ui.directory.people.PeopleDetailsFragment"
-        android:label="PeopleDetailsFragment"
-        tools:layout="@layout/fragment_people_details"
-        />
+        android:label="People Details"
+        tools:layout="@layout/fragment_people_details">
+
+    </fragment>
 </navigation>
