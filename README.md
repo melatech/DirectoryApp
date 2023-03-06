@@ -10,6 +10,7 @@ in design with a solid architecture.
 - The data layer contains data classes, datasources and API's and the repository which exposes data to the app and resolves conflicts between multiple datasources.
 - The network API called Retrofit that is also in the data layer which is a http client library which allows serialization of request and response calls.
 - Kotlin Coroutines with suspend functions was the reactive framework used with flow, for handling streams of data without blocking the main Thread.
+- Hilt was the dependency injection framework of choice also suggested by google for providing the objects with their dependencies.
 </br>
 </br>
 People Screen
