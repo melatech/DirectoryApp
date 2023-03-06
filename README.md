@@ -15,7 +15,7 @@ in design with a solid architecture.
 People Screen
 </br>
 </br>
-<img src="https://user-images.githubusercontent.com/13630124/222964713-a536a9ed-f8a0-43b8-83dd-61148f6c19ed.jpg" alt="virgin money image" width="270" height="585">
+<img src="https://user-images.githubusercontent.com/13630124/222995733-cb917dfd-9ac5-4b8a-b4cd-303df6be88c8.jpg" alt="virgin money image" width="270" height="585">
 
 The people list feature displays a list of employees in a recyclerview which makes it very easy to display large sets of data. 
 The recyclerview does what it says on the tin, it recycles the views as they scroll onto the screen, 
